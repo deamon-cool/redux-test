@@ -7,4 +7,5 @@ const rootReducer = (state, action) => {
 };
 
 // Store
-const store = createStore();
+const store = createStore(rootReducer);
+console.log(store.getState());
