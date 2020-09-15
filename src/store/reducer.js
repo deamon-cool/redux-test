@@ -1,5 +1,5 @@
 const initState = {
-    counter: 0
+    counter: 8
 };
 
 const reducer = (state = initState, action) => {
