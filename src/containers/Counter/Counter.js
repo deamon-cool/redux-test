@@ -27,6 +27,8 @@ class Counter extends Component {
     }
 
     render() {
+        console.log('render')
+
         return (
             <div>
                 <CounterOutput value={this.props.counterValue} />
@@ -40,7 +42,7 @@ class Counter extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state.counter)
+    console.log('mapStateToProps')
 
     return {
         counterValue: state.counter
@@ -48,6 +50,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
+    console.log('mapDispatchToProps')
+
     return {
         onIncrementCounter: () => dispatch({ type: 'INCREMENT' })
     };
