@@ -15,6 +15,12 @@ const reducer = (state = initState, action) => {
         };
     }
 
+    if (action.type === 'ADD_VALUE') {
+        return {
+            counter: state.counter + action.value
+        };
+    }
+
     return state;
 };
 
