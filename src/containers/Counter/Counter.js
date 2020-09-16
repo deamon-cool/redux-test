@@ -29,7 +29,7 @@ class Counter extends Component {
     render() {
         return (
             <div>
-                <CounterOutput value={this.state.counterValue} />
+                <CounterOutput value={this.props.counterValue} />
                 <CounterControl label="Increment" clicked={this.props.onIncrementCounter} />
                 <CounterControl label="Decrement" clicked={() => this.counterChangedHandler('dec')} />
                 <CounterControl label="Add 5" clicked={() => this.counterChangedHandler('add', 5)} />
