@@ -9,6 +9,12 @@ const reducer = (state = initState, action) => {
         };
     }
 
+    if (action.type === 'DECREMENT') {
+        return {
+            counter: state.counter - 1
+        };
+    }
+
     return state;
 };
 
