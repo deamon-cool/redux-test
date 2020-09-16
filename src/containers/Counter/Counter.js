@@ -39,7 +39,9 @@ class Counter extends Component {
                 <hr />
                 <button onClick={this.props.onStoreResult}>Store Result</button>
                 <ul>
-                    <li onClick={this.props.onDeleteReult}></li>
+                    {this.props.storedResults.map(storeResult => (
+                        <li key={storeResult.id} onClick={this.props.onDeleteReult}>{storeResult.value}</li>
+                    ))}
                 </ul>
             </div>
         );
@@ -50,7 +52,8 @@ const mapStateToProps = state => {
     console.log('mapStateToProps')
 
     return {
-        counterValue: state.counter
+        counterValue: state.counter,
+        storedResults: state.results
     };
 };
 
