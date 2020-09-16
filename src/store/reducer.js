@@ -1,5 +1,6 @@
 const initState = {
-    counter: 8
+    counter: 8,
+    results: []
 };
 
 const reducer = (state = initState, action) => {
