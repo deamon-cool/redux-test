@@ -34,8 +34,8 @@ const mapStateToProps = state => {
     console.log('mapStateToProps')
 
     return {
-        counterValue: state.counter,
-        storedResults: state.results
+        counterValue: state.ctr.counter,
+        storedResults: state.res.results
     };
 };
 
